@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <!-- 短信模板 -->
+        <record model="ir.ui.view" id="message_template_form">
+            <field name="name">smshelper.message_template.form</field>
+            <field name="model">smshelper.message_template</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="短信模板">
+                    <field name="name" select="1"/>
+                    <field name="content" colspan="4" select="1"/>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="message_template_form_action">
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">smshelper.message_template</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem name="Administration/短信/短信模板" id="menu_message_template_form_action" action="message_template_form_action"/>
+
+        <!-- 短信帐号 -->
+        <record model="ir.ui.view" id="account_form">
+            <field name="name">smshelper.account.form</field>
+            <field name="model">smshelper.account</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="短信帐号">
+                    <field name="name" select="1"/>
+                    <field name="username" select="1"/>
+                    <field name="password" select="1"/>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="account_form_action">
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">smshelper.account</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem name="Administration/短信/短信帐号" id="menu_account_form_action" action="account_form_action"/>
+
+
+    </data>
+</openerp>

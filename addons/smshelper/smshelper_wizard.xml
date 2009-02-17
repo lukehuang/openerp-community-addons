@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<wizard string="发送短信" model="res.partner" name="smshelper.sms_send" id="res_partner_smshelper_wizard"/>
+	</data>
+</openerp>

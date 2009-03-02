@@ -1,10 +1,14 @@
 
-The installation of Open ERP
+The installation of Open ERP OpenERP的安装
 """""""""""""""""""""""""""""
 
 Whether you're from a small company investigating how Open ERP works, or on the IT staff of a larger organization and have been asked to assess Open ERP's capabilities, your first requirement is to install it or to find a working installation.
 
+无论你是从一家小公司来研究OpenERP的工作方式，还是作为大集团的IT员工来调查OpenERP的实用性，你首先要做的就是安装工作。
+
 The table below summarizes the various installation methods that will be described in the following sections.
+
+下表总结了各种安装方法，它们将在余下的章节中进行详述。
 
 
 
@@ -17,15 +21,34 @@ The table below summarizes the various installation methods that will be describ
    "Independent installation on Windows","Half an hour","Medium","Enables you to install the components on different computers. Can be put into production use."
    "Ubuntu Linux packages","A few minutes","Simple","Simple and quick but the Ubuntu packages aren't always up to date."
    "From source, for all Linux systems","More than half an hour","Medium to slightly difficult","This is the method recommended for production environments because it's easy to keep it up to date."
+
+
+
+
+ .. csv-table:: 在Windows 和 Linux平台下的安装方法.
+   :header: "方法","平均耗时","复杂度","注释"
+   :widths: 20, 15, 15,30
+
+   "集成化Windows安装","几分钟","简单","非常实用而且快捷，它将会把所有配置好的组件安装在同一台电脑上。（采用GTK客户端）"
+   "在Windows下进行独立安装","半小时","中","可以将组件安装在不同的电脑上。可投产使用。"
+   "Ubuntu Linuxb包","几分钟","简单","简单快捷，但是Ubuntu的包有时会跟不上更新。"
+   "从源代码安装，适用于所有Linux","大于半小时","较难","这种方式推荐投产使用，便于跟上更新。"
    
    
    
 
 Each time a new release of Open ERP is made, Tiny supplies a complete Windows auto-installer for it. This contains all of the components you need – the PostgreSQL database server, the Open ERP application server and the GTK application client.
 
+每次OpenERP有新版本发行时，Tiny公司都会提供一套Windows的自动安装程序。它包含你所需要的所有组件，包括PostgreSQL数据库服务器，OpenERP应用程序服务器和GTK客户端。
+
 This auto-installer enables you to install the whole system in just a few mouse-clicks. The initial configuration is set up during installation, making it possible to start using it very quickly as long as you don't want to change the underlying code. It's aimed at the installation of everything on a single PC, but you can later connect GTK clients from other PCs, Macs and Linux boxes to it as well.
 
+这套自动安装程序可以使得你在几分钟内就完成整个安装。安装过程中就会进行初始化配置，因此只要你不想改变底层代码，你可以很快开始使用OpenERP。它将把所有的组建安装在通一台计算机上，但随后你可以在其他的电脑上，可以是Macs或者Linux系列平台，来使用GTK客户端连接。
+
+
 The first step is to download the Open ERP installer. At this stage you must choose which version to install – the stable version or the development version. If you're planning to put it straight into production you're strongly advised to choose the stable version.
+
+第一步是下载OpenERP安装程序。你首先要选择要安装的版本，有稳定版和开发版。如果你想直接投入使用的话，强烈建议选择稳定版。
 
 .. index::
    single: Stable versions
@@ -45,55 +68,84 @@ The first step is to download the Open ERP installer. At this stage you must ch
 
 To download the version of Open ERP for Windows, follow these steps:
 
+要下载Windows的OpenERP安装包，按照以下步骤进行：
+
 	#. Navigate to the site http://openerp.com,
+           登陆 http://openerp.com 页面，
 
 	#. Click Product on the menu at the left, then Download,
+           单击左侧的 Produnct,然后单击 Download
 
 	#. Download the demonstration version Windows installer 
 	        – currently Open ERP 5.0.0 Stable Version > Windows Installers > All In One,
+           下载Windows演示版安装程序
+                - 当前是 Open ERP 5.0.0 Stable Version > Windows Installers > All In One,
 
 	#. Save the file on your PC.
+           将文件保存在你的电脑上
 
 To install Open ERP and its database you must be signed in as an Administrator on your PC. Double-click the installer file and accept the default parameters on each dialog box this way:
 
+为了安装OpenERP和它的数据库，你必须以管理员身份登陆你的计算机。按照如下步骤，双击安装文件，在每个对话框中选择默认参数：
+
 	#. Run the installer,
+           运行安装文件，
 
 	#. Start the installation procedure by clicking  *Next* in the installation window,
+           在安装窗口中点击 *Next* 来开始安装，
 
 	#. Accept the GPL license by clicking  *I Agree*,
+           点击 *I Agree* 同意GPL协议，
 
 	#. Install Open ERP in the location in \ ``Program Files``\  hat is suggested by the installer,
+           将OpenERP安装在默认的 \ ``Program Files``\ 目录下，
 
 	#. Wait two or three minutes for the installation to complete, then click  *Next*,
+           等待两三分钟后安装就可以完成，然后点击 *Next* ，
 
 	#. Close the installation window using the middle button,  *Finish*.
+           点击 *Finish* ，关闭安装窗口
 
 The Open ERP client can then be opened, ready to use the Open ERP system. The next step consists of configuring the database, and is covered in the final section of this chapter, *Creating the database.*
+
+随后你就可以打开OpenERP客户端准备使用。接下来的工作包是置数据库，有关操作将在本章最后一节 *建立数据库* 进行讨论。
 
 .. index::
    single: Open ERP Installation; Windows (Independent)
 .. 
 
 
-Independent installation on Windows
+Independent installation on Windows 在Windows下的独立安装
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 System administrators can have very good reasons for wanting to install the various components of a Windows installation separately. For example, your company may not support the version of PostgreSQL or Python that's installed automatically, or you may already have PostgreSQL installed on the server you're using, or you may want to install the database server, application server and web server on separate hardware units. 
 
+系统管理员们倾向于将不同的组件分开安装是很正常的事情。例如，你的公司也许不支持自动安装上的PostgreSQL或者Python的版本，或者你已经有正在使用的PostgreSQL，又或者你想把数据库服务器、应用程序服务器、web服务器安装在不同的计算机上。
+
 For this situation you can get separate installers for the Open ERP server and client from the same location as the all-in-one auto-installer. You'll also have to download and install a suitable version of PostgreSQL independently. 
+
+在这种情况下你可以在你获得allinone自动安装包的地方下载针对OpenERP服务器和客户端的独立安装包。你还需要下载对应版本的PostgreSQL。
 
 You must install PostgreSQL before the Open ERP server, and you must also configure it with a user and password so that the Open ERP server can connect to it. Tiny's web-based documentation gives full and current details.
 
+在安装OpenERP之前，你必须先安装PostgreSQL，还要为OpenERP准备一个可以连接数据库的用户。Tiny的网上文档给出了具体的步骤。
+
 If you had previously tried to install the all-in-one version of Open ERP, you'd best uninstall that in case its embedded PostgreSQL installation interferes with your stand-alone installation.
 
-Connecting users on other PCs to the Open ERP server
+如果之前安装了allinone的OpenERP，你最好将其卸载掉，以防止它内嵌的PostgreSQL影响你的独立安装。
+
+Connecting users on other PCs to the Open ERP server 连接其他计算机上的OpenERP服务器
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To connect other computers to the Open ERP server you must configure the server so that it's visible to the other PCs, and install a GTK client on each of the those PCs:
 
+想要连接到其他计算机上的OpenERP服务器，你要对OpenERP服务器进行配置使得它对客户端是可见的，在每台客户端计算机上都要安装GTK客户端程序。
+
 	#. Make your Open ERP server visible to other PCs by opening the Windows Firewall in the Control Panel, hen asking the firewall to make an exception of the Open ERP server. In the  *Exceptions* tab of Windows Firewall click on  *Add a program...* and choose  *Open ERP Server* in the list provided. This step enables other computers to see the Open ERP application on this server.
+           通过控制面板，更改防火墙设置，使得其他电脑能够看到你的OpenERP服务器，设置防火墙将OpenERP视为例外。在 *例外* 选项卡中点击 *添加程序* ，在提供的列表中选择 *OpenERP服务器* 。这一步骤使得别的电脑可以看到本机运行的OpenERP服务器。
 
 	#. Install the Open ERP client (\ ``openerp-client-4.X.exe``\  , which you can download in the same way as you downloaded the other Open ERP software, onto the other PCs.
+           安装OpenERP客户端  （ \ ``openerp-client-4.X.exe``\ ，同样可以在你下在其他OpenERP软件的地方下载到）  
 
 .. tip::   **Attention**  *Version matching* 
 
@@ -101,7 +153,11 @@ To connect other computers to the Open ERP server you must configure the server
 
 To run the client installer on every other PC you'll need to have administrator rights there. The installation is automated, so you just need to guide it through its different installation steps.
 
+想要运行客户端安装程序，你必须以管理员身份登陆。安装过程是自动的，你只需要在每一步骤按提示操作即可。
+
 To test your installation, start by connecting through the Open ERP client on the server machine while you're still logged in as administrator. 
+
+为了检测安装是否成功，以管理员身份登陆，运行客户端程序连接服务器进行测试。
 
 .. tip::   **Note**  *Why signed in as a PC Administrator?* 
 
@@ -110,18 +166,22 @@ To test your installation, start by connecting through the Open ERP client on t
 
 Start the GTK client on the server through the Windows Start menu there. The main client window appears, identifying the server you're connected to (which is \ ``localhost``\   – your own server PC – by default). If the message  *No database found, you must create one*  appears then you've successfully connected to an Open ERP server containing, as yet, no databases.
 
+通过开始菜单启动GTK客户端，客户端的主窗口便显现出来，确定你要连接的服务器（默认为本机 \ ``localhost``\ ）。如果显示 *没有数据库，请新建* ，虽然还没有数据库，但你已经成功的连接到服务器了。
+
 
 .. image:: images/new_login_dlg.png
 	:align: center
 
-*Dialog box on connecting a GTK client to a new Open ERP server.*
+*Dialog box on connecting a GTK client to a new Open ERP server. 连接到新OpenERP的GTK客户端对话框*
 
 .. index::
    single: XML-RPC
 
-.. tip::   **Note**  *Connection modes* 
+.. tip::   **Note**  *Connection modes 连接模式* 
 
 	In its default configuration, the Open ERP client connects to port 8069 on the server using the XML-RPC protocol. You can change this and connect to port 8070 using the NET-RPC protocol instead. NET-RPC is quite a bit quicker, although you may not notice that on the GTK client in normal use.
+
+        按照默认配置，OpenERP客户端将遵循XML-RPC协议使用8069端口连接服务器。你也可以遵循NET-RPC协议使用8070端口连接服务器。NET-RPC能够稍快一些，但是在使用GTK客户端时这种优势很难被察觉到。
 
 Resolving errors with a Windows installation
 #############################################

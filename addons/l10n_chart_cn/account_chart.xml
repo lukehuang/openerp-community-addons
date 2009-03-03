@@ -1,0 +1,1332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data noupdate="1">
+    <record id="chart0" model="account.account">
+      <field name="code">0</field>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[]"/>
+      <field name="type">view</field>
+      <field name="name">中国会计科目表</field>
+    </record>
+    <record id="chart1" model="account.account">
+      <field name="code">1</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart0')])]"/>
+      <field name="type">view</field>
+      <field name="name">一、资产类</field>
+    </record>
+    <record id="chart1001" model="account.account">
+      <field name="code">1001</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">cash</field>
+      <field name="name">现金</field>
+    </record>
+    <record id="chart1002" model="account.account">
+      <field name="code">1002</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">cash</field>
+      <field name="name">银行存款</field>
+    </record>
+    <record id="chart1009" model="account.account">
+      <field name="code">1009</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">view</field>
+      <field name="name">其他货币资金</field>
+    </record>
+    <record id="chart100901" model="account.account">
+      <field name="code">100901</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1009')])]"/>
+      <field name="type">asset</field>
+      <field name="name">外埠存款</field>
+    </record>
+    <record id="chart100902" model="account.account">
+      <field name="code">100902</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1009')])]"/>
+      <field name="type">asset</field>
+      <field name="name">银行本票</field>
+    </record>
+    <record id="chart100903" model="account.account">
+      <field name="code">100903</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1009')])]"/>
+      <field name="type">asset</field>
+      <field name="name">银行汇票</field>
+    </record>
+    <record id="chart100904" model="account.account">
+      <field name="code">100904</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1009')])]"/>
+      <field name="type">asset</field>
+      <field name="name">信用卡</field>
+    </record>
+    <record id="chart100905" model="account.account">
+      <field name="code">100905</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1009')])]"/>
+      <field name="type">asset</field>
+      <field name="name">信用证保证金</field>
+    </record>
+    <record id="chart100906" model="account.account">
+      <field name="code">100906</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1009')])]"/>
+      <field name="type">asset</field>
+      <field name="name">存出投资款</field>
+    </record>
+    <record id="chart1101" model="account.account">
+      <field name="code">1101</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">view</field>
+      <field name="name">短期投资</field>
+    </record>
+    <record id="chart110101" model="account.account">
+      <field name="code">110101</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1101')])]"/>
+      <field name="type">asset</field>
+      <field name="name">股票</field>
+    </record>
+    <record id="chart110102" model="account.account">
+      <field name="code">110102</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1101')])]"/>
+      <field name="type">asset</field>
+      <field name="name">债券</field>
+    </record>
+    <record id="chart110103" model="account.account">
+      <field name="code">110103</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1101')])]"/>
+      <field name="type">asset</field>
+      <field name="name">基金</field>
+    </record>
+    <record id="chart110110" model="account.account">
+      <field name="code">110110</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1101')])]"/>
+      <field name="type">asset</field>
+      <field name="name">其他</field>
+    </record>
+    <record id="chart1102" model="account.account">
+      <field name="code">1102</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">短期投资跌价准备</field>
+    </record>
+    <record id="chart1111" model="account.account">
+      <field name="code">1111</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">应收票据</field>
+    </record>
+    <record id="chart1121" model="account.account">
+      <field name="code">1121</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">应收股利</field>
+    </record>
+    <record id="chart1122" model="account.account">
+      <field name="code">1122</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">应收利息</field>
+    </record>
+    <record id="chart1131" model="account.account">
+      <field name="code">1131</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">receivable</field>
+      <field name="name">应收账款</field>
+    </record>
+    <record id="chart1133" model="account.account">
+      <field name="code">1133</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">其他应收款</field>
+    </record>
+    <record id="chart1141" model="account.account">
+      <field name="code">1141</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">坏账准备</field>
+    </record>
+    <record id="chart1151" model="account.account">
+      <field name="code">1151</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">payable</field>
+      <field name="name">预付账款</field>
+    </record>
+    <record id="chart1161" model="account.account">
+      <field name="code">1161</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">应收补贴款</field>
+    </record>
+    <record id="chart1201" model="account.account">
+      <field name="code">1201</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">物资采购</field>
+    </record>
+    <record id="chart1211" model="account.account">
+      <field name="code">1211</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">原材料</field>
+    </record>
+    <record id="chart1221" model="account.account">
+      <field name="code">1221</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">包装物</field>
+    </record>
+    <record id="chart1231" model="account.account">
+      <field name="code">1231</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">低值易耗品</field>
+    </record>
+    <record id="chart1232" model="account.account">
+      <field name="code">1232</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">材料成本差异</field>
+    </record>
+    <record id="chart1241" model="account.account">
+      <field name="code">1241</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">自制半成品</field>
+    </record>
+    <record id="chart1243" model="account.account">
+      <field name="code">1243</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">库存商品</field>
+    </record>
+    <record id="chart1244" model="account.account">
+      <field name="code">1244</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">商品进销差价</field>
+    </record>
+    <record id="chart1251" model="account.account">
+      <field name="code">1251</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">委托加工物资</field>
+    </record>
+    <record id="chart1261" model="account.account">
+      <field name="code">1261</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">委托代销商品</field>
+    </record>
+    <record id="chart1271" model="account.account">
+      <field name="code">1271</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">受托代销商品</field>
+    </record>
+    <record id="chart1281" model="account.account">
+      <field name="code">1281</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">存货跌价准备</field>
+    </record>
+    <record id="chart1291" model="account.account">
+      <field name="code">1291</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">分期收款发出商品</field>
+    </record>
+    <record id="chart1301" model="account.account">
+      <field name="code">1301</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">待摊费用</field>
+    </record>
+    <record id="chart1401" model="account.account">
+      <field name="code">1401</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">view</field>
+      <field name="name">长期股权投资</field>
+    </record>
+    <record id="chart140101" model="account.account">
+      <field name="code">140101</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1401')])]"/>
+      <field name="type">asset</field>
+      <field name="name">股票投资</field>
+    </record>
+    <record id="chart140102" model="account.account">
+      <field name="code">140102</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1401')])]"/>
+      <field name="type">asset</field>
+      <field name="name">其他股权投资</field>
+    </record>
+    <record id="chart1402" model="account.account">
+      <field name="code">1402</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">view</field>
+      <field name="name">长期债权投资</field>
+    </record>
+    <record id="chart140201" model="account.account">
+      <field name="code">140201</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1402')])]"/>
+      <field name="type">asset</field>
+      <field name="name">债券投资</field>
+    </record>
+    <record id="chart140202" model="account.account">
+      <field name="code">140202</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1402')])]"/>
+      <field name="type">asset</field>
+      <field name="name">其他债权投资</field>
+    </record>
+    <record id="chart1421" model="account.account">
+      <field name="code">1421</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">长期投资减值准备</field>
+    </record>
+    <record id="chart1431" model="account.account">
+      <field name="code">1431</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">view</field>
+      <field name="name">委托贷款</field>
+    </record>
+    <record id="chart143101" model="account.account">
+      <field name="code">143101</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1431')])]"/>
+      <field name="type">asset</field>
+      <field name="name">本金</field>
+    </record>
+    <record id="chart143102" model="account.account">
+      <field name="code">143102</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1431')])]"/>
+      <field name="type">asset</field>
+      <field name="name">利息</field>
+    </record>
+    <record id="chart143103" model="account.account">
+      <field name="code">143103</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1431')])]"/>
+      <field name="type">asset</field>
+      <field name="name">减值准备</field>
+    </record>
+    <record id="chart1501" model="account.account">
+      <field name="code">1501</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">固定资产</field>
+    </record>
+    <record id="chart1502" model="account.account">
+      <field name="code">1502</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">累计折旧</field>
+    </record>
+    <record id="chart1505" model="account.account">
+      <field name="code">1505</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">固定资产减值准备</field>
+    </record>
+    <record id="chart1601" model="account.account">
+      <field name="code">1601</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">view</field>
+      <field name="name">工程物资</field>
+    </record>
+    <record id="chart160101" model="account.account">
+      <field name="code">160101</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1601')])]"/>
+      <field name="type">asset</field>
+      <field name="name">专用材料</field>
+    </record>
+    <record id="chart160102" model="account.account">
+      <field name="code">160102</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1601')])]"/>
+      <field name="type">asset</field>
+      <field name="name">专用设备</field>
+    </record>
+    <record id="chart160103" model="account.account">
+      <field name="code">160103</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1601')])]"/>
+      <field name="type">asset</field>
+      <field name="name">预付大型设备款</field>
+    </record>
+    <record id="chart160104" model="account.account">
+      <field name="code">160104</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1601')])]"/>
+      <field name="type">asset</field>
+      <field name="name">为生产准备的工具及器具</field>
+    </record>
+    <record id="chart1603" model="account.account">
+      <field name="code">1603</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">在建工程</field>
+    </record>
+    <record id="chart1605" model="account.account">
+      <field name="code">1605</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">在建工程减值准备</field>
+    </record>
+    <record id="chart1701" model="account.account">
+      <field name="code">1701</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">固定资产清理</field>
+    </record>
+    <record id="chart1801" model="account.account">
+      <field name="code">1801</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">无形资产</field>
+    </record>
+    <record id="chart1805" model="account.account">
+      <field name="code">1805</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">无形资产减值准备</field>
+    </record>
+    <record id="chart1815" model="account.account">
+      <field name="code">1815</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">未确认融资费用</field>
+    </record>
+    <record id="chart1901" model="account.account">
+      <field name="code">1901</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">asset</field>
+      <field name="name">长期待摊费用</field>
+    </record>
+    <record id="chart1911" model="account.account">
+      <field name="code">1911</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1')])]"/>
+      <field name="type">view</field>
+      <field name="name">待处理财产损溢</field>
+    </record>
+    <record id="chart191101" model="account.account">
+      <field name="code">191101</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1911')])]"/>
+      <field name="type">asset</field>
+      <field name="name">待处理流动资产损溢</field>
+    </record>
+    <record id="chart191102" model="account.account">
+      <field name="code">191102</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart1911')])]"/>
+      <field name="type">asset</field>
+      <field name="name">待处理固定资产损溢</field>
+    </record>
+    <record id="chart2" model="account.account">
+      <field name="code">2</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart0')])]"/>
+      <field name="type">view</field>
+      <field name="name">二、负债类</field>
+    </record>
+    <record id="chart2101" model="account.account">
+      <field name="code">2101</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">短期借款</field>
+    </record>
+    <record id="chart2111" model="account.account">
+      <field name="code">2111</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">应付票据</field>
+    </record>
+    <record id="chart2121" model="account.account">
+      <field name="code">2121</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">payable</field>
+      <field name="name">应付账款</field>
+    </record>
+    <record id="chart2131" model="account.account">
+      <field name="code">2131</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">receivable</field>
+      <field name="name">预收账款</field>
+    </record>
+    <record id="chart2141" model="account.account">
+      <field name="code">2141</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">view</field>
+      <field name="name">代销商品款</field>
+    </record>
+    <record id="chart2151" model="account.account">
+      <field name="code">2151</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">应付工资</field>
+    </record>
+    <record id="chart2153" model="account.account">
+      <field name="code">2153</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">应付福利费</field>
+    </record>
+    <record id="chart2161" model="account.account">
+      <field name="code">2161</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">应付股利</field>
+    </record>
+    <record id="chart2171" model="account.account">
+      <field name="code">2171</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">view</field>
+      <field name="name">应交税金</field>
+    </record>
+    <record id="chart217101" model="account.account">
+      <field name="code">217101</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2171')])]"/>
+      <field name="type">view</field>
+      <field name="name">应交增值税</field>
+    </record>
+    <record id="chart21710101" model="account.account">
+      <field name="code">21710101</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart217101')])]"/>
+      <field name="type">tax</field>
+      <field name="name">进项税额</field>
+    </record>
+    <record id="chart21710102" model="account.account">
+      <field name="code">21710102</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart217101')])]"/>
+      <field name="type">tax</field>
+      <field name="name">已交税金</field>
+    </record>
+    <record id="chart21710103" model="account.account">
+      <field name="code">21710103</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart217101')])]"/>
+      <field name="type">tax</field>
+      <field name="name">转出未交增值税</field>
+    </record>
+    <record id="chart21710104" model="account.account">
+      <field name="code">21710104</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart217101')])]"/>
+      <field name="type">tax</field>
+      <field name="name">减免税款</field>
+    </record>
+    <record id="chart21710105" model="account.account">
+      <field name="code">21710105</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart217101')])]"/>
+      <field name="type">tax</field>
+      <field name="name">销项税额</field>
+    </record>
+    <record id="chart21710106" model="account.account">
+      <field name="code">21710106</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart217101')])]"/>
+      <field name="type">tax</field>
+      <field name="name">出口退税</field>
+    </record>
+    <record id="chart21710107" model="account.account">
+      <field name="code">21710107</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart217101')])]"/>
+      <field name="type">tax</field>
+      <field name="name">进项税额转出</field>
+    </record>
+    <record id="chart21710108" model="account.account">
+      <field name="code">21710108</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart217101')])]"/>
+      <field name="type">tax</field>
+      <field name="name">出口抵减内销产品应纳税额</field>
+    </record>
+    <record id="chart21710109" model="account.account">
+      <field name="code">21710109</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart217101')])]"/>
+      <field name="type">tax</field>
+      <field name="name">转出多交增值税</field>
+    </record>
+    <record id="chart21710110" model="account.account">
+      <field name="code">21710110</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart217101')])]"/>
+      <field name="type">tax</field>
+      <field name="name">未交增值税</field>
+    </record>
+    <record id="chart217102" model="account.account">
+      <field name="code">217102</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2171')])]"/>
+      <field name="type">tax</field>
+      <field name="name">应交营业税</field>
+    </record>
+    <record id="chart217103" model="account.account">
+      <field name="code">217103</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2171')])]"/>
+      <field name="type">tax</field>
+      <field name="name">应交消费税</field>
+    </record>
+    <record id="chart217104" model="account.account">
+      <field name="code">217104</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2171')])]"/>
+      <field name="type">tax</field>
+      <field name="name">应交资源税</field>
+    </record>
+    <record id="chart217105" model="account.account">
+      <field name="code">217105</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2171')])]"/>
+      <field name="type">tax</field>
+      <field name="name">应交所得税</field>
+    </record>
+    <record id="chart217106" model="account.account">
+      <field name="code">217106</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2171')])]"/>
+      <field name="type">tax</field>
+      <field name="name">应交土地增值税</field>
+    </record>
+    <record id="chart217107" model="account.account">
+      <field name="code">217107</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2171')])]"/>
+      <field name="type">tax</field>
+      <field name="name">应交城市维护建设税</field>
+    </record>
+    <record id="chart217108" model="account.account">
+      <field name="code">217108</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2171')])]"/>
+      <field name="type">tax</field>
+      <field name="name">应交房产税</field>
+    </record>
+    <record id="chart217109" model="account.account">
+      <field name="code">217109</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2171')])]"/>
+      <field name="type">tax</field>
+      <field name="name">应交土地使用税</field>
+    </record>
+    <record id="chart217110" model="account.account">
+      <field name="code">217110</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2171')])]"/>
+      <field name="type">tax</field>
+      <field name="name">应交车船使用税</field>
+    </record>
+    <record id="chart217111" model="account.account">
+      <field name="code">217111</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2171')])]"/>
+      <field name="type">tax</field>
+      <field name="name">应交个人所得税</field>
+    </record>
+    <record id="chart2176" model="account.account">
+      <field name="code">2176</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">其他应交款</field>
+    </record>
+    <record id="chart2181" model="account.account">
+      <field name="code">2181</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">其他应付款</field>
+    </record>
+    <record id="chart2191" model="account.account">
+      <field name="code">2191</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">预提费用</field>
+    </record>
+    <record id="chart2201" model="account.account">
+      <field name="code">2201</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">待转资产价值</field>
+    </record>
+    <record id="chart2211" model="account.account">
+      <field name="code">2211</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">预计负债</field>
+    </record>
+    <record id="chart2301" model="account.account">
+      <field name="code">2301</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">长期借款</field>
+    </record>
+    <record id="chart2311" model="account.account">
+      <field name="code">2311</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">view</field>
+      <field name="name">应付债券</field>
+    </record>
+    <record id="chart231101" model="account.account">
+      <field name="code">231101</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2311')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">债券面值</field>
+    </record>
+    <record id="chart231102" model="account.account">
+      <field name="code">231102</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2311')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">债券溢价</field>
+    </record>
+    <record id="chart231103" model="account.account">
+      <field name="code">231103</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2311')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">债券折价</field>
+    </record>
+    <record id="chart231104" model="account.account">
+      <field name="code">231104</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2311')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">应计利息</field>
+    </record>
+    <record id="chart2321" model="account.account">
+      <field name="code">2321</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">长期应付款</field>
+    </record>
+    <record id="chart2331" model="account.account">
+      <field name="code">2331</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">专项应付款</field>
+    </record>
+    <record id="chart2341" model="account.account">
+      <field name="code">2341</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart2')])]"/>
+      <field name="type">labilities</field>
+      <field name="name">递延税款</field>
+    </record>
+    <record id="chart3" model="account.account">
+      <field name="code">3</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart0')])]"/>
+      <field name="type">view</field>
+      <field name="name">三、所有者权益类</field>
+    </record>
+    <record id="chart3101" model="account.account">
+      <field name="code">3101</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3')])]"/>
+      <field name="type">equity</field>
+      <field name="name">实收资本(或股本)</field>
+    </record>
+    <record id="chart3103" model="account.account">
+      <field name="code">3103</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3')])]"/>
+      <field name="type">equity</field>
+      <field name="name">已归还投资</field>
+    </record>
+    <record id="chart3111" model="account.account">
+      <field name="code">3111</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3')])]"/>
+      <field name="type">view</field>
+      <field name="name">资本公积</field>
+    </record>
+    <record id="chart311101" model="account.account">
+      <field name="code">311101</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3111')])]"/>
+      <field name="type">equity</field>
+      <field name="name">资本(或股本)溢价</field>
+    </record>
+    <record id="chart311102" model="account.account">
+      <field name="code">311102</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3111')])]"/>
+      <field name="type">equity</field>
+      <field name="name">接受捐赠非现金资产准备</field>
+    </record>
+    <record id="chart311103" model="account.account">
+      <field name="code">311103</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3111')])]"/>
+      <field name="type">equity</field>
+      <field name="name">接受现金捐赠</field>
+    </record>
+    <record id="chart311104" model="account.account">
+      <field name="code">311104</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3111')])]"/>
+      <field name="type">equity</field>
+      <field name="name">股权投资准备</field>
+    </record>
+    <record id="chart311105" model="account.account">
+      <field name="code">311105</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3111')])]"/>
+      <field name="type">equity</field>
+      <field name="name">拨款转入</field>
+    </record>
+    <record id="chart311106" model="account.account">
+      <field name="code">311106</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3111')])]"/>
+      <field name="type">equity</field>
+      <field name="name">外币资本折算差额</field>
+    </record>
+    <record id="chart311107" model="account.account">
+      <field name="code">311107</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3111')])]"/>
+      <field name="type">equity</field>
+      <field name="name">其他资本公积</field>
+    </record>
+    <record id="chart3121" model="account.account">
+      <field name="code">3121</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3')])]"/>
+      <field name="type">view</field>
+      <field name="name">盈余公积</field>
+    </record>
+    <record id="chart312101" model="account.account">
+      <field name="code">312101</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3121')])]"/>
+      <field name="type">equity</field>
+      <field name="name">法定盈余公积</field>
+    </record>
+    <record id="chart312102" model="account.account">
+      <field name="code">312102</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3121')])]"/>
+      <field name="type">equity</field>
+      <field name="name">任意盈余公积</field>
+    </record>
+    <record id="chart312103" model="account.account">
+      <field name="code">312103</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3121')])]"/>
+      <field name="type">equity</field>
+      <field name="name">法定公益金</field>
+    </record>
+    <record id="chart312104" model="account.account">
+      <field name="code">312104</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3121')])]"/>
+      <field name="type">equity</field>
+      <field name="name">储备基金</field>
+    </record>
+    <record id="chart312105" model="account.account">
+      <field name="code">312105</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3121')])]"/>
+      <field name="type">equity</field>
+      <field name="name">企业发展基金</field>
+    </record>
+    <record id="chart312106" model="account.account">
+      <field name="code">312106</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3121')])]"/>
+      <field name="type">equity</field>
+      <field name="name">利润归还投资</field>
+    </record>
+    <record id="chart3131" model="account.account">
+      <field name="code">3131</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3')])]"/>
+      <field name="type">equity</field>
+      <field name="name">本年利润</field>
+    </record>
+    <record id="chart3141" model="account.account">
+      <field name="code">3141</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3')])]"/>
+      <field name="type">view</field>
+      <field name="name">利润分配</field>
+    </record>
+    <record id="chart314101" model="account.account">
+      <field name="code">314101</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3141')])]"/>
+      <field name="type">equity</field>
+      <field name="name">其他转入</field>
+    </record>
+    <record id="chart314102" model="account.account">
+      <field name="code">314102</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3141')])]"/>
+      <field name="type">equity</field>
+      <field name="name">提取法定盈余公积</field>
+    </record>
+    <record id="chart314103" model="account.account">
+      <field name="code">314103</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3141')])]"/>
+      <field name="type">equity</field>
+      <field name="name">提取法定公益金</field>
+    </record>
+    <record id="chart314104" model="account.account">
+      <field name="code">314104</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3141')])]"/>
+      <field name="type">equity</field>
+      <field name="name">提取储备基金</field>
+    </record>
+    <record id="chart314105" model="account.account">
+      <field name="code">314105</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3141')])]"/>
+      <field name="type">equity</field>
+      <field name="name">提取企业发展基金</field>
+    </record>
+    <record id="chart314106" model="account.account">
+      <field name="code">314106</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3141')])]"/>
+      <field name="type">equity</field>
+      <field name="name">提取职工奖励及福利基金</field>
+    </record>
+    <record id="chart314107" model="account.account">
+      <field name="code">314107</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3141')])]"/>
+      <field name="type">equity</field>
+      <field name="name">利润归还投资</field>
+    </record>
+    <record id="chart314108" model="account.account">
+      <field name="code">314108</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3141')])]"/>
+      <field name="type">equity</field>
+      <field name="name">应付优先股股利</field>
+    </record>
+    <record id="chart314109" model="account.account">
+      <field name="code">314109</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3141')])]"/>
+      <field name="type">equity</field>
+      <field name="name">提取任意盈余公积</field>
+    </record>
+    <record id="chart314110" model="account.account">
+      <field name="code">314110</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3141')])]"/>
+      <field name="type">equity</field>
+      <field name="name">应付普通股股利</field>
+    </record>
+    <record id="chart314111" model="account.account">
+      <field name="code">314111</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3141')])]"/>
+      <field name="type">equity</field>
+      <field name="name">转作资本(或股本)的普通股股利</field>
+    </record>
+    <record id="chart314115" model="account.account">
+      <field name="code">314115</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart3141')])]"/>
+      <field name="type">equity</field>
+      <field name="name">未分配利润</field>
+    </record>
+    <record id="chart4" model="account.account">
+      <field name="code">4</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart0')])]"/>
+      <field name="type">view</field>
+      <field name="name">四、成本类</field>
+    </record>
+    <record id="chart4101" model="account.account">
+      <field name="code">4101</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart4')])]"/>
+      <field name="type">view</field>
+      <field name="name">生产成本</field>
+    </record>
+    <record id="chart410101" model="account.account">
+      <field name="code">410101</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart4101')])]"/>
+      <field name="type">expense</field>
+      <field name="name">基本生产成本</field>
+    </record>
+    <record id="chart410102" model="account.account">
+      <field name="code">410102</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart4101')])]"/>
+      <field name="type">expense</field>
+      <field name="name">辅助生产成本</field>
+    </record>
+    <record id="chart4105" model="account.account">
+      <field name="code">4105</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart4')])]"/>
+      <field name="type">expense</field>
+      <field name="name">制造费用</field>
+    </record>
+    <record id="chart4107" model="account.account">
+      <field name="code">4107</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart4')])]"/>
+      <field name="type">expense</field>
+      <field name="name">劳务成本</field>
+    </record>
+    <record id="chart5" model="account.account">
+      <field name="code">5</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart0')])]"/>
+      <field name="type">view</field>
+      <field name="name">五、损益类</field>
+    </record>
+    <record id="chart5101" model="account.account">
+      <field name="code">5101</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart5')])]"/>
+      <field name="type">income</field>
+      <field name="name">主营业务收入</field>
+    </record>
+    <record id="chart5102" model="account.account">
+      <field name="code">5102</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart5')])]"/>
+      <field name="type">income</field>
+      <field name="name">其他业务收入</field>
+    </record>
+    <record id="chart5201" model="account.account">
+      <field name="code">5201</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart5')])]"/>
+      <field name="type">income</field>
+      <field name="name">投资收益</field>
+    </record>
+    <record id="chart5203" model="account.account">
+      <field name="code">5203</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart5')])]"/>
+      <field name="type">income</field>
+      <field name="name">补贴收入</field>
+    </record>
+    <record id="chart5301" model="account.account">
+      <field name="code">5301</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart5')])]"/>
+      <field name="type">income</field>
+      <field name="name">营业外收入</field>
+    </record>
+    <record id="chart5401" model="account.account">
+      <field name="code">5401</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart5')])]"/>
+      <field name="type">expense</field>
+      <field name="name">主营业务成本</field>
+    </record>
+    <record id="chart5402" model="account.account">
+      <field name="code">5402</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart5')])]"/>
+      <field name="type">expense</field>
+      <field name="name">主营业务税金及附加</field>
+    </record>
+    <record id="chart5405" model="account.account">
+      <field name="code">5405</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart5')])]"/>
+      <field name="type">expense</field>
+      <field name="name">其他业务支出</field>
+    </record>
+    <record id="chart5501" model="account.account">
+      <field name="code">5501</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart5')])]"/>
+      <field name="type">expense</field>
+      <field name="name">营业费用</field>
+    </record>
+    <record id="chart5502" model="account.account">
+      <field name="code">5502</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart5')])]"/>
+      <field name="type">expense</field>
+      <field name="name">管理费用</field>
+    </record>
+    <record id="chart5503" model="account.account">
+      <field name="code">5503</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart5')])]"/>
+      <field name="type">expense</field>
+      <field name="name">财务费用</field>
+    </record>
+    <record id="chart5601" model="account.account">
+      <field name="code">5601</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart5')])]"/>
+      <field name="type">expense</field>
+      <field name="name">营业外支出</field>
+    </record>
+    <record id="chart5701" model="account.account">
+      <field name="code">5701</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">none</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart5')])]"/>
+      <field name="type">expense</field>
+      <field name="name">所得税</field>
+    </record>
+    <record id="chart5801" model="account.account">
+      <field name="code">5801</field>
+      <field name="reconcile" eval="False"/>
+      <field name="close_method">balance</field>
+      <field name="parent_id" eval="[(6, 0, [ref('chart5')])]"/>
+      <field name="type">expense</field>
+      <field name="name">以前年度损益调整</field>
+    </record>
+  </data>
+</openerp>

@@ -1,4 +1,3 @@
-﻿
 ********
 Foreword前言
 ********
@@ -6,17 +5,17 @@ Foreword前言
 
 Information Systems have played an increasingly visible role over the past several years in improving the competitiveness of business. More than just tools for handling repetitive tasks, they're used to guide and advance all of a company's' daily activities. Integrated management software is today very often a key source of significant competitive advantage.
 
-在过去几年里，信息系统在改善企业竞争力方面发挥了越来越明显的作用。它不仅仅是用来处理重复性任务的工具，而且还引导和推进着企业的日常业务活动。如今，集成化的管理软件往往是一项关键资源，它能够使你的企业更具有竞争力。
+最近这些年里,信息系统在协助提高企业竞争力上扮演着越来越重要的角色。它们不仅仅被用于处理重复性的工作，更重要地，它们被用以指导和提升公司的所有日常事务。集成管理软件往往成为当今企业强大竞争力的重要来源。
 
 The standard response to a need for responsiveness, reliability, and rapidly increasing expectations is to create an organization based on departments with a clear linear structure, integrated around your operating processes. To increase efficiency amongst salespeople, accountants, logistics staff and everyone else you should have a common understanding of your problems.
 
-如果你有响应性、可靠性、迅速扩张方面的需求，按照标准，你应该建立一个组织。该组织基于各个部门，具有清晰的线型结构，与你的业务操作流程相结合。你还需要对你面临的问题有大致的了解，以便于更好地提高推销员、会计、后勤人员和其他人的效率。
+为获得高效可靠的商业运作及快速响应客户需求的能力,我们往往采用职能划分清晰的部门为单位的组织架构。而要提高诸如销售，财务，物流等各部门员工的效率，就必须使他们对企业运作实践有一个清晰的共识。
 
 For this you need a common language for shared references, policies and communication. An ERP (Enterprise Resource Planning) system makes the ideal platform for this common reference point.
 
-因此，你需要一套通用语言为提出问题、解决问题、相互交流来服务。一套ERP（企业资源计划）系统能够成为解决这一问题的理想平台。
+要做到这一点，我们就需要一个交流共通，信息共享的通用语言。ERP（企业资源规划）系统成为这种协同合作的理想平台。
 
-Open Source software at the service of management  为管理服务的开源软件
+Open Source software at the service of management
 ---------------------------------------------------
 
 Risks and integration costs are important barriers to all the advantages you gain from such systems. That's why, today, few small- and medium-sized companies use ERP. In addition, the larger ERP vendors such as SAP, Microsoft and Oracle haven't been able to reconcile the power and comprehensive cover of an ERP system with the simplicity and flexibility wanted by the users. But this is exactly what small and medium enterprises are looking for. 

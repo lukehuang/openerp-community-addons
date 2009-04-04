@@ -6,7 +6,7 @@
 
 = 安装 =
 
- # 请[[http://openerp-community-addons.googlecode.com/files/base_report_cn.zip 单击此处]]下载 base_report_cn.zip 压缩包。
+ # 请[http://openerp-community-addons.googlecode.com/files/base_report_cn.zip 单击此处]下载 base_report_cn.zip 压缩包。
  # 将其解压到 `openerp-server/bin/addons/` 下
  # 在 OpenERP 中更新模块列表并安装 base_report_cn 模块。
  # Enjoy it! 

@@ -10,3 +10,7 @@
  # 将其解压到 `openerp-server/bin/addons/` 下
  # 在 OpenERP 中更新模块列表并安装 base_report_cn 模块。
  # Enjoy it! 
+
+= 提示 =
+
+如果您是 Windows 用户的话可以把 Windows 系统自带的 SimSun.ttc 和 SimHei.ttf 分别改名为 SimSun.ttf 和 SimHei.ttf 复制到 base_report_cn/fonts 目录中即可替换本模块自带的开源字体。

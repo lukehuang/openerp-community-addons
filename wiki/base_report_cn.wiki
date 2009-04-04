@@ -2,7 +2,7 @@
 
 = 模块简介 =
 
-“base_report_cn”模块是基于 [[http://exploringopenerp.blogspot.com/2009/04/new-module-basereportunicode.html Gábor Dukai]] 编写的 base_report_unicode 模块修改而来，自带了开源的文泉驿正黑体和 AR PL SungtiL GB 宋体。该模块的使用非常简单，直接导入这个模块，不需要任何的 hack，OpenERP 现存的报表即可直接支持中文。当然了，内置报表的现存的文字仍然是英文的，本模块只是提供中文支持，让中文别显示成方框。
+“base_report_cn”模块是基于 [http://exploringopenerp.blogspot.com/2009/04/new-module-basereportunicode.html Gábor Dukai] 编写的 base_report_unicode 模块修改而来，自带了开源的文泉驿正黑体和 AR PL SungtiL GB 宋体。该模块的使用非常简单，直接导入这个模块，不需要任何的 hack，OpenERP 现存的报表即可直接支持中文。当然了，内置报表的现存的文字仍然是英文的，本模块只是提供中文支持，让中文别显示成方框。
 
 = 安装 =
 

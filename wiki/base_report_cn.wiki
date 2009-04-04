@@ -1,0 +1,12 @@
+#summary 模块 base_report_cn 安装使用指南
+
+= 模块简介 =
+
+“base_report_cn”模块是基于 [[http://exploringopenerp.blogspot.com/2009/04/new-module-basereportunicode.html Gábor Dukai]] 编写的 base_report_unicode 模块修改而来，自带了开源的文泉驿正黑体和 AR PL SungtiL GB 宋体。该模块的使用非常简单，直接导入这个模块，不需要任何的 hack，OpenERP 现存的报表即可直接支持中文。当然了，内置报表的现存的文字仍然是英文的，本模块只是提供中文支持，让中文别显示成方框。
+
+= 安装 =
+
+ 1. 请[[http://openerp-community-addons.googlecode.com/files/base_report_cn.zip 单击此处]]下载 base_report_cn.zip 压缩包。
+ 2. 将其解压到 `openerp-server/bin/addons/` 下
+ 3. 在 OpenERP 中更新模块列表并安装 base_report_cn 模块。
+ 4. Enjoy it! 

@@ -70,13 +70,22 @@ def wrap_trml2pdf(method):
             starttag = ''
             endtag = ''
         data = odata[:i] + starttag
-        adp = os.path.normcase(os.path.abspath(config['addons_path']))
+        adp = os.path.abspath(config['addons_path'])
         for new in fontmap.itervalues():
-            data += '    <registerFont fontName="' + new + '" fontFile="' + adp + '/base_report_cn/fonts/' + new + '.ttf"/>\n'
+            fntp = os.path.normcase(os.path.join(adp, 'base_report_cn', 'fonts', new))
+            data += '    <registerFont fontName="' + new + '" fontFile="' + fntp + '.ttf"/>\n'
         data += endtag + odata[i:]
         for  old, new in fontmap.iteritems():
             data = data.replace(old, new)
-        return method(data, args[1:], **argv)
+
+        if len(args) > 2:
+            myargs = args[1:]
+        else:
+            myargs = args[1]
+            
+        return method(data, myargs, **argv)
     return convert2TrueType
 
 report.render.rml2pdf.parseString = wrap_trml2pdf(report.render.rml2pdf.parseString)
+
+report.render.rml2pdf.parseNode = wrap_trml2pdf(report.render.rml2pdf.parseNode)

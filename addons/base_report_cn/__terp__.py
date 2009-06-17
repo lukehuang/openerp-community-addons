@@ -19,14 +19,14 @@
 ##############################################################################
 {
     "name" : "Chinese Unicode Reports with TrueType fonts",
-    "version" : "1.0",
-    "author" : "Wei Li",
-    "website" : "http://www.oldrev.com",
+    "version" : "1.1",
+    "author" : "bruce",
     "description": """
     使用文泉驿正黑体和 AR PL SungtiL GB 宋体替换系统原来不支持 Unicode 的英文字体，安装此模块可以自动使内置的报表自动支持中文字体。 \n
+    NOTE: 直接解压复制到 addons 目录. 不用导入!
     原始 base_report_unicode 模块作者：Gábor Dukai
     """,
-    "depends" : ["base", ],
+    "depends" : ["base"],
     "category" : "Generic Modules/Base",
     "demo_xml" : [],
     "update_xml" : [],

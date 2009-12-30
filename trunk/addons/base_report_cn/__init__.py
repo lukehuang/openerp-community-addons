@@ -23,6 +23,14 @@ from tools.config import config
 import report
 import os
 
+import reportlab.pdfbase.pdfmetrics
+import reportlab.pdfbase.ttfonts
+adp = os.path.abspath(config['addons_path'])
+fonts = ('SimSun', 'SimHei')
+for font in fonts:
+    fntp = os.path.normcase(os.path.join(adp, 'base_report_cn', 'fonts', font+'.ttf'))
+    reportlab.pdfbase.pdfmetrics.registerFont(reportlab.pdfbase.ttfonts.TTFont( font,fntp))
+
 def wrap_trml2pdf(method):
     """We have to wrap the original parseString() to modify the rml data
     before it generates the pdf."""
@@ -30,7 +38,7 @@ def wrap_trml2pdf(method):
         """This function replaces the type1 font names with their truetype
         substitutes and puts a font registration section at the beginning
         of the rml file. The rml file is acually a string (data)."""
-        odata = args[0]
+        data = args[0]
         fontmap = {
             'Times-Roman':                   'SimSun',
             'Times-BoldItalic':              'SimSun',
@@ -40,11 +48,15 @@ def wrap_trml2pdf(method):
             'Helvetica':                     'SimHei',
             'Helvetica-BoldItalic':          'SimHei',
             'Helvetica-Bold':                'SimHei',
+            'Helvetica-BoldOblique':         'SimHei',
+            'Helvetica-Oblique':             'SimHei',
             'Helvetica-Italic':              'SimHei',
 
             'Courier':                       'SimSun',
             'Courier-Bold':                  'SimSun',
             'Courier-BoldItalic':            'SimSun',
+            'Courier-BoldOblique':           'SimSun',
+            'Courier-Oblique':               'SimSun',
             'Courier-Italic':                'SimSun',
 
             'Helvetica-ExtraLight':          'SimHei',
@@ -59,23 +71,6 @@ def wrap_trml2pdf(method):
             'HelveticaCondensed-Bold':       'SimHei',
             'HelveticaCondensed-Italic':     'SimHei',
         }
-        i = odata.find('<docinit>')
-        if i == -1:
-            i = odata.find('<document')
-            i = odata.find('>', i)
-            i += 1
-            starttag = '\n<docinit>\n'
-            endtag = '</docinit>'
-        else:
-            i = i + len('<docinit>')
-            starttag = ''
-            endtag = ''
-        data = odata[:i] + starttag
-        adp = os.path.abspath(config['addons_path'])
-        for new in set(fontmap.values()):
-            fntp = os.path.normcase(os.path.join(adp, 'base_report_cn', 'fonts', new))
-            data += '    <registerFont fontName="' + new + '" fontFile="' + fntp + '.ttf"/>\n'
-        data += endtag + odata[i:]
         while len(fontmap)>0:
             ck=max(fontmap)
             data = data.replace(ck,fontmap.pop(ck))

@@ -1,7 +1,13 @@
 <?xml version="1.0"?>
 <openerp>
 	<data>
-        
+
+        <!-- 设置中国中文名称 -->
+        <record id="base.cn" model="res.country">
+            <field name="name">中华人民共和国</field>
+            <field name="code">cn</field>
+        </record>
+
         <!-- 添加省份数据 -->
         <record id="state_BJ" model="res.country.state">
             <field name="name">北京市</field>
@@ -161,7 +167,7 @@
 
         <!-- 货币 -->
         <record id="base.CNY" model="res.currency">
-            <field name="name">人民币</field>
+            <field name="name">元</field>
             <field name="code">CNY</field>
             <field name="rounding">0.01</field>
             <field name="accuracy">4</field>
@@ -174,7 +180,7 @@
 
 
         <!-- 公司及业务伙伴定义 -->
-        
+
         <record id="base.main_partner" model="res.partner">
             <field name="name">某公司</field>
         </record>
@@ -194,6 +200,6 @@
             <field name="rml_header1">公司页眉</field>
             <field name="currency_id" ref="base.CNY"/>
         </record>
-        
-	</data>
+
+    </data>
 </openerp>

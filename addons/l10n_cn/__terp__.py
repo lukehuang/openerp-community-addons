@@ -41,6 +41,7 @@
     "category" : "Generic Modules/Base",
     'init_xml': [
         'data/base_data.xml',
+        'data/security_data.xml',
     ],
     "demo_xml" : [],
     "update_xml" : [],

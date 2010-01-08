@@ -24,11 +24,15 @@ import os
 
 import reportlab.pdfbase.pdfmetrics
 import reportlab.pdfbase.ttfonts
+import reportlab.lib.styles
+
 adp = os.path.abspath(config['addons_path'])
 fonts = ('SimSun', 'SimHei')
 for font in fonts:
     fntp = os.path.normcase(os.path.join(adp, 'l10n_cn', 'fonts', font+'.ttf'))
     reportlab.pdfbase.pdfmetrics.registerFont(reportlab.pdfbase.ttfonts.TTFont( font,fntp))
+
+reportlab.lib.styles.ParagraphStyle.defaults['wordWrap'] = "CJK"
 
 def wrap_trml2pdf(method):
     """We have to wrap the original parseString() to modify the rml data

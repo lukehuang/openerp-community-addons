@@ -31,6 +31,8 @@ for font in fonts:
     fntp = os.path.normcase(os.path.join(adp, 'base_report_cn', 'fonts', font+'.ttf'))
     reportlab.pdfbase.pdfmetrics.registerFont(reportlab.pdfbase.ttfonts.TTFont( font,fntp))
 
+reportlab.lib.styles.ParagraphStyle.defaults['wordWrap'] = "CJK"
+
 def wrap_trml2pdf(method):
     """We have to wrap the original parseString() to modify the rml data
     before it generates the pdf."""

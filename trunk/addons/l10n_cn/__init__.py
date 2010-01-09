@@ -24,7 +24,7 @@ import os
 import sys
 
 from reportlab.pdfbase.pdfmetrics import registerFont
-import reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfbase.ttfonts import TTFont
 import reportlab.lib.styles
 
 if sys.platform == "win32" or sys.platform == "win64":

@@ -16,7 +16,7 @@
     "category" : "Localisation/Account Charts",
     "depends" : ["account", "account_chart"],
     "demo_xml" : [],
-    "update_xml" : ["account_chart.xml"],
+    "update_xml" : ["account_chart.xml","wizard.xml"],
     "active": False,
     "installable": True
 }

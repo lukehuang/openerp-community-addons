@@ -13,7 +13,7 @@
     xinglv   将csv文件转换为符合V4版本格式的xml文件
     """,
     "website": "http://www.shine-it.net",
-    "category" : "Localisation/Account charts",
+    "category" : "Localisation/Account Charts",
     "depends" : ["account", "account_chart"],
     "demo_xml" : [],
     "update_xml" : ["account_chart.xml"],

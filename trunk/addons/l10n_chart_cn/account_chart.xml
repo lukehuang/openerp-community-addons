@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-  <data noupdate="1">
+  <data noupdate="True">
     <!-- account.account.type -->
     <record id="user_type_view" model="account.account.type">
       <field name="name">视图类</field>

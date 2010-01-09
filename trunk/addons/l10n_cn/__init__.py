@@ -29,7 +29,7 @@ import reportlab.lib.styles
 
 if sys.platform == "win32" or sys.platform == "win64":
     fonts_dir = os.path.join(os.getenv("WINDIR"), "Fonts")    
-    registerFont(TTFont("SimSun", os.path.join(fonts_dir, "simsum.ttc")))
+    registerFont(TTFont("SimSun", os.path.join(fonts_dir, "simsun.ttc")))
     registerFont(TTFont("SimHei", os.path.join(fonts_dir, "simhei.ttf")))
 else:
     fonts = ('SimSun', 'SimHei')

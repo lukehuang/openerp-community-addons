@@ -21,16 +21,21 @@
 from tools.config import config
 import report
 import os
+import sys
 
-import reportlab.pdfbase.pdfmetrics
-import reportlab.pdfbase.ttfonts
+from reportlab.pdfbase.pdfmetrics import registerFont
+import reportlab.pdfbase.ttfonts import TTFont
 import reportlab.lib.styles
 
-adp = os.path.abspath(config['addons_path'])
-fonts = ('SimSun', 'SimHei')
-for font in fonts:
-    fntp = os.path.normcase(os.path.join(adp, 'l10n_cn', 'fonts', font+'.ttf'))
-    reportlab.pdfbase.pdfmetrics.registerFont(reportlab.pdfbase.ttfonts.TTFont( font,fntp))
+if sys.platform == "win32" or sys.platform == "win64":
+    registerFont(TTFont("SimSun", os.path.join("%WINDIR%/fonts", "simsun.ttc")))
+    registerFont(TTFont("SimHei", os.path.join("%WINDIR%/fonts", "simsun.ttf")))
+else:
+    fonts = ('SimSun', 'SimHei')
+    adp = os.path.abspath(config['addons_path'])
+    for font in fonts:
+        fntp = os.path.normcase(os.path.join(adp, 'l10n_cn', 'fonts', font+'.ttf'))
+        registerFont(TTFont(font, fntp))
 
 reportlab.lib.styles.ParagraphStyle.defaults['wordWrap'] = "CJK"
 

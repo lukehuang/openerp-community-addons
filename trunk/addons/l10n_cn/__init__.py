@@ -28,8 +28,9 @@ from reportlab.pdfbase.ttfonts import TTFont
 import reportlab.lib.styles
 
 if sys.platform == "win32" or sys.platform == "win64":
-    registerFont(TTFont("SimSun", "simsum.ttc"))
-    registerFont(TTFont("SimHei", "simhei.ttf"))
+    fonts_dir = os.path.join(os.getenv("WINDIR"), "Fonts")    
+    registerFont(TTFont("SimSun", os.path.join(fonts_dir, "simsum.ttc")))
+    registerFont(TTFont("SimHei", os.path.join(fonts_dir, "simhei.ttf")))
 else:
     fonts = ('SimSun', 'SimHei')
     adp = os.path.abspath(config['addons_path'])
